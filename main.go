@@ -13,6 +13,9 @@ func main() {
 	}
 
 	verificador := numero % 10
+
+	fmt.Print("El digito verificador es ", verificador)
+
 	acumulador := 0
 	for i := 0; i < 15; i++ {
 		//Extraigo el ultimo dígito de la derecha
