@@ -8,6 +8,10 @@ func main() {
 	fmt.Print("Ingrese un numero entero de 16 dígitos: ")
 	fmt.Scanln(&numero)
 
+	if numero < 1000000000000000 || numero > 9999999999999999 {
+		fmt.Print("El numero ", numero, " no tiene 16 digitos")
+	}
+
 	verificador := numero % 10
 	acumulador := 0
 	for i := 0; i < 15; i++ {
