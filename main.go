@@ -9,12 +9,15 @@ func main() {
 	fmt.Scanln(&numero)
 
 	if numero < 1000000000000000 || numero > 9999999999999999 {
-		fmt.Print("El numero ", numero, " no tiene 16 digitos")
+		fmt.Println("El numero ", numero, " no tiene 16 digitos")
 	}
 
 	verificador := numero % 10
+	numero = numero / 10
 
-	fmt.Print("El digito verificador es ", verificador)
+	fmt.Println("El digito verificador es ", verificador)
+
+	fmt.Println("Aplicando calculo en ", numero)
 
 	acumulador := 0
 	for i := 0; i < 15; i++ {
@@ -37,6 +40,8 @@ func main() {
 	}
 
 	resultado := (acumulador * 9) % 10
+
+	fmt.Println("El resultado es ", resultado)
 
 	if resultado == verificador {
 
