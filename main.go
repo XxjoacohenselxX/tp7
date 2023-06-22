@@ -31,12 +31,12 @@ func validar(numero int) (valido bool) {
 		if i%2 == 0 {
 			//posicion par
 			//TODO actualizar el acumulador
-			digito += acumulador
+			acumulador += digito
 
 		} else {
 			//posicion impar
 			//TODO actualizar el acumulador
-			digito += acumulador
+			acumulador += digito
 		}
 
 		//Elimino el ultimo dígito de la derecha
