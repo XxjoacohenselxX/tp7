@@ -6,7 +6,7 @@ func main() {
 	var numero int
 
 	fmt.Print("Ingrese un numero entero de 16 dígitos: ")
-	fmt.Scanln(numero)
+	fmt.Scanln(&numero)
 
 	verificador := numero % 10
 	acumulador := 0
