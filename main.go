@@ -14,6 +14,8 @@ func main() {
 func validar(numero int) (valido bool) {
 	if numero < 1000000000000000 || numero > 9999999999999999 {
 		fmt.Println("El numero ", numero, " no tiene 16 digitos")
+		valido = false
+		return
 	}
 
 	verificador := numero % 10
@@ -31,13 +33,9 @@ func validar(numero int) (valido bool) {
 		if i%2 == 0 {
 			//posicion par
 			//TODO actualizar el acumulador
-			acumulador += digito
-
-		} else {
-			//posicion impar
-			//TODO actualizar el acumulador
-			acumulador += digito
 		}
+
+		acumulador += digito
 
 		//Elimino el ultimo dígito de la derecha
 		numero = numero / 10
