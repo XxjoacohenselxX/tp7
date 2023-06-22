@@ -8,6 +8,10 @@ func main() {
 	fmt.Print("Ingrese un numero entero de 16 dígitos: ")
 	fmt.Scanln(&numero)
 
+	validar(numero)
+}
+
+func validar(numero int) (valido bool) {
 	if numero < 1000000000000000 || numero > 9999999999999999 {
 		fmt.Println("El numero ", numero, " no tiene 16 digitos")
 	}
@@ -44,9 +48,12 @@ func main() {
 	fmt.Println("El resultado es ", resultado)
 
 	if resultado == verificador {
-
+		//TODO imprimir el mensaje correspondiente
+		valido = true
 	} else {
-
+		//TODO imprimir el mensaje correspondiente
+		valido = false
 	}
 
+	return
 }
